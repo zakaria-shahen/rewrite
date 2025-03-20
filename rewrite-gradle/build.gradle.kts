@@ -78,7 +78,7 @@ dependencies {
 // No option to explicitly target java-8 in the groovy compiler
 tasks.withType<GroovyCompile> {
     this.javaLauncher.set(javaToolchains.launcherFor {
-        languageVersion.set(JavaLanguageVersion.of(8))
+        languageVersion.set(JavaLanguageVersion.of(17))
     })
 }
 

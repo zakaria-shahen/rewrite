@@ -54,3 +54,17 @@ To understand better how Moderne can help your team, [contact us](https://www.mo
 ## Contributing
 
 We appreciate all types of contributions. See the [contributing guide](https://github.com/openrewrite/.github/blob/main/CONTRIBUTING.md) for detailed instructions on how to get started.
+
+
+### How to run locally
+
+- Set java version to 17.
+  - In Gradle
+    ![how_to_run__gradle_java_version.png](doc/how_to_run__gradle_java_version.png)
+  - use kotlin here. 
+   ![how_to_run__kotlin_java_version.png](doc/how_to_run__kotlin_java_version.png)
+- Run next command
+```shell
+  .\gradlew :tools:language-parser-builder:jar
+```
+- Now you can build and run the application normally using you favorite IDE like IntelliJ IDEA. 
