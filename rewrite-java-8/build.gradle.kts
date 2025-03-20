@@ -4,7 +4,7 @@ plugins {
 }
 
 val compiler = javaToolchains.compilerFor {
-    languageVersion.set(JavaLanguageVersion.of(8))
+    languageVersion.set(JavaLanguageVersion.of(17))
 }
 
 val tools = compiler.get().metadata.installationPath.file("lib/tools.jar")
@@ -41,7 +41,7 @@ configurations.all {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(8))
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
@@ -53,13 +53,13 @@ tasks.withType<JavaCompile>().configureEach {
 tasks.withType<Test>().configureEach {
     jvmArgs = listOf("-XX:+UnlockDiagnosticVMOptions", "-XX:+ShowHiddenFrames")
     javaLauncher.set(javaToolchains.launcherFor {
-        languageVersion.set(JavaLanguageVersion.of(8))
+        languageVersion.set(JavaLanguageVersion.of(17))
     })
 }
 
 tasks.withType<Javadoc>().configureEach {
     executable = javaToolchains.javadocToolFor {
-        languageVersion.set(JavaLanguageVersion.of(8))
+        languageVersion.set(JavaLanguageVersion.of(17))
     }.get().executablePath.toString()
 }
 
